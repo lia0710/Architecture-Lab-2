@@ -1,19 +1,5 @@
-﻿  AssetManager.cpp
-  Component.cpp
-  Engine.cpp
+﻿  SceneManager.cpp
 C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\Lab2\json.hpp(282,31): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\Lab2\json.hpp(295,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\Lab2\json.hpp(297,31): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Entity.cpp
-  InputManager.cpp
-  json.cpp
-C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\Lab2\json.hpp(282,31): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\Lab2\json.hpp(295,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\Lab2\json.hpp(297,31): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Lab2.cpp
-  Object.cpp
-  RenderSystem.cpp
-  Scene.cpp
-  SceneManager.cpp
-  Generating Code...
   Lab2.vcxproj -> C:\Users\admin\OneDrive\Desktop\Architecture\Lab 2 Attempt 3\Architecture-Lab-2\Lab2\x64\Debug\Lab2.exe

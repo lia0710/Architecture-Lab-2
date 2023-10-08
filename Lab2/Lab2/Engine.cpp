@@ -21,6 +21,8 @@ void Engine::Initialize()
 {
 	//load game settings
 	//half goes in here, half in render system
+	//Load();
+	sceneManager->Initialize();
 	std::ifstream SettinginputStream("GameSettings.json");
 	std::string Settingstr((std::istreambuf_iterator<char>(SettinginputStream)), std::istreambuf_iterator<char>());
 	json::JSON settingdocument = json::JSON::Load(Settingstr);
