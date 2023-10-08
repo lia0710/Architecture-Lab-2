@@ -23,7 +23,7 @@ void Object::Initialize()
 
 bool Object::IsInitialized()
 {
-
+	return false;
 }
 
 void Object::Load()

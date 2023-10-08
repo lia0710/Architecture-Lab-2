@@ -13,6 +13,7 @@ class Engine
 	AssetManager* assetManager = new AssetManager;
 	SceneManager* sceneManager = new SceneManager;
 
+public:
 	Engine();
 	~Engine();
 	void Initialize();

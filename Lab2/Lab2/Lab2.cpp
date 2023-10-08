@@ -3,5 +3,6 @@
 
 int main()
 {
-    //test change 2
+    Engine myengine = Engine();
+    myengine.Initialize();
 }
