@@ -25,7 +25,7 @@ void SceneManager::Initialize()
 		if (sceneManager[0].hasKey("name"))
 		{
             json::JSON sceneName = sceneManager[0]["name"];
-			std::cout << "Scene Name: " << sceneName.ToString() << "\n";
+			//std::cout << "Scene Name: " << sceneName.ToString() << "\n";
 		}
 	}
 	std::cout << "Scene Manager Initialized" << std::endl;

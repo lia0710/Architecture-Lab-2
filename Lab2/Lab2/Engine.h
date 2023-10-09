@@ -5,13 +5,14 @@
 #include "InputManager.h"
 #include "AssetManager.h"
 #include "SceneManager.h"
+#include "json.hpp"
 
 class Engine
 {
-	RenderSystem* renderSystem = new RenderSystem;
-	InputManager* inputManager = new InputManager;
-	AssetManager* assetManager = new AssetManager;
-	SceneManager* sceneManager = new SceneManager;
+	RenderSystem* renderSystem; //= new RenderSystem;
+	InputManager* inputManager; //= new InputManager;
+	AssetManager* assetManager; //= new AssetManager;
+	SceneManager* sceneManager; //= new SceneManager;
 
 public:
 	Engine();
@@ -19,7 +20,7 @@ public:
 	void Initialize();
 	void Destroy();
 	void GameLoop();
-	void Load();
+	void Load(json::JSON settingDocument);
 };
 #endif
 
