@@ -20,6 +20,7 @@ void Entity::Initialize()
 void Entity::Destroy()
 {
 	std::cout << "Entity Destroyed" << std::endl;
+	Entity::~Entity();
 }
 
 void Entity::AddComponent(Component* _component)
@@ -42,7 +43,7 @@ std::string Entity::GetName()
 	return "";
 }
 
-void Entity::Load()
+void Entity::Load(json::JSON file)
 {
 	std::cout << "Entity Loaded" << std::endl;
 }

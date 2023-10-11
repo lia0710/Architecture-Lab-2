@@ -3,6 +3,7 @@
 #define _ENTITY_H_
 #include <string>
 #include "Component.h"
+#include "json.hpp"
 
 class Entity
 {
@@ -15,7 +16,7 @@ public:
 	void RemoveComponent(Component* _component);
 	void Update();
 	std::string GetName();
-	void Load();
+	void Load(json::JSON file);
 };
 
 #endif

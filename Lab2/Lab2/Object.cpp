@@ -14,6 +14,7 @@ Object::~Object()
 void Object::Destroy()
 {
 	std::cout << "Object Destroyed" << std::endl;
+	Object::~Object();
 }
 
 void Object::Initialize()

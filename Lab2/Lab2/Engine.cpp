@@ -37,17 +37,19 @@ void Engine::Initialize()
 
 
 	Load(settingdocument);
-	/*Engine::renderSystem->Initialize();
-	Engine::renderSystem->Load();
-	Engine::inputManager->Initialize();
-	Engine::assetManager->Initialize();
-	Engine::sceneManager->Initialize();*/
+
+	std::ifstream LevelinputStream(levelDocument.ToString());
+	std::string Levelstr((std::istreambuf_iterator<char>(LevelinputStream)), std::istreambuf_iterator<char>());
+	json::JSON leveldocument = json::JSON::Load(Levelstr);
+
+	Engine::sceneManager->Load(leveldocument);
 
 }
 
 void Engine::Destroy()
 {
 	std::cout << "Engine Destroyed" << std::endl;
+	Engine::~Engine();
 }
 
 void Engine::GameLoop()
@@ -63,8 +65,8 @@ void Engine::Load(json::JSON settingDocument)
 
 		if (engine.hasKey("DefaultFile"))
 		{
-			json::JSON file = engine["DefaultFile"];
-			std::cout << "File: " << file.ToString() << "\n";
+			Engine::levelDocument = engine["DefaultFile"];
+			std::cout << "File: " << Engine::levelDocument.ToString() << "\n";
 			std::cout << "Engine Loaded" << std::endl;
 
 			Engine::renderSystem->Load(settingDocument);

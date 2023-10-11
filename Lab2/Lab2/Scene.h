@@ -3,10 +3,12 @@
 #define _SCENE_H_
 #include "Entity.h"
 #include <list>
+#include "json.hpp"
 
 class Scene
 {
 	std::list<Entity*> entities;
+	std::string name = "";
 	
 public:
 	Scene();
@@ -16,7 +18,7 @@ public:
 	void Update();
 	void AddEntity(Entity* _entity);
 	void RemoveEntity(Entity* _entity);
-	void Load();
+	void Load(json::JSON file);
 };
 
 #endif

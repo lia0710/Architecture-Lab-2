@@ -20,6 +20,7 @@ void InputManager::Initialize()
 void InputManager::Destroy()
 {
 	std::cout << "Input Manager Destroyed" << std::endl;
+	InputManager::~InputManager();
 }
 
 void InputManager::Update()

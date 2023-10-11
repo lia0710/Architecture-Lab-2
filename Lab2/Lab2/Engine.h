@@ -9,12 +9,16 @@
 
 class Engine
 {
-	RenderSystem* renderSystem; //= new RenderSystem;
-	InputManager* inputManager; //= new InputManager;
-	AssetManager* assetManager; //= new AssetManager;
-	SceneManager* sceneManager; //= new SceneManager;
+	RenderSystem* renderSystem;
+	InputManager* inputManager;
+	AssetManager* assetManager;
+	SceneManager* sceneManager;
+
 
 public:
+
+	json::JSON levelDocument;
+
 	Engine();
 	~Engine();
 	void Initialize();

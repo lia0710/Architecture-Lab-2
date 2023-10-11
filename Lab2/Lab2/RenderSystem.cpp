@@ -20,6 +20,7 @@ void RenderSystem::Initialize()
 void RenderSystem::Destroy()
 {
 	std::cout << "Render System Destroyed" << std::endl;
+	RenderSystem::~RenderSystem();
 }
 
 void RenderSystem::Update()

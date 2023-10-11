@@ -20,6 +20,7 @@ void AssetManager::Initialize()
 void AssetManager::Destroy()
 {
 	std::cout << "Asset Manager Destroyed" << std::endl;
+	AssetManager::~AssetManager();
 }
 
 void AssetManager::Update()
