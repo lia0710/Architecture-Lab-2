@@ -11,6 +11,8 @@ Engine::Engine()
 	Engine::inputManager = new InputManager;
 	Engine::assetManager = new AssetManager;
 	Engine::sceneManager = new SceneManager;
+
+	Initialize();
 }
 
 Engine::~Engine()
@@ -24,21 +26,22 @@ Engine::~Engine()
 
 void Engine::Initialize()
 {
+
+	std::cout << "Engine Initialized" << std::endl;
+
 	//load game settings
 	//half goes in here, half in render system
-	//Load();
 	std::ifstream SettinginputStream("GameSettings.json");
 	std::string Settingstr((std::istreambuf_iterator<char>(SettinginputStream)), std::istreambuf_iterator<char>());
 	json::JSON settingdocument = json::JSON::Load(Settingstr);
 
-	std::cout << "Engine Initialized" << std::endl;
 
 	Load(settingdocument);
-	Engine::renderSystem->Initialize();
+	/*Engine::renderSystem->Initialize();
 	Engine::renderSystem->Load();
 	Engine::inputManager->Initialize();
 	Engine::assetManager->Initialize();
-	Engine::sceneManager->Initialize();
+	Engine::sceneManager->Initialize();*/
 
 }
 
@@ -60,8 +63,11 @@ void Engine::Load(json::JSON settingDocument)
 
 		if (engine.hasKey("DefaultFile"))
 		{
-			//std::cout << "File: " << engine["DefaultFile"].ToString() << "\n";
+			json::JSON file = engine["DefaultFile"];
+			std::cout << "File: " << file.ToString() << "\n";
+			std::cout << "Engine Loaded" << std::endl;
+
+			Engine::renderSystem->Load(settingDocument);
 		}
 	}
-	std::cout << "Engine Loaded" << std::endl;
 }

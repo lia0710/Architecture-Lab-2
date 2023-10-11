@@ -4,5 +4,5 @@
 int main()
 {
     Engine myengine = Engine();
-    myengine.Initialize();
+    //myengine.Initialize();
 }

@@ -2,6 +2,7 @@
 #ifndef _RENDER_H_
 #define _RENDER_H_
 #include <string>
+#include "json.hpp"
 
 class RenderSystem
 {
@@ -16,7 +17,7 @@ public:
 	void Initialize();
 	void Destroy();
 	void Update();
-	void Load();
+	void Load(json::JSON file);
 };
 
 #endif
