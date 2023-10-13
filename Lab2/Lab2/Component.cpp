@@ -35,5 +35,21 @@ void Component::Update()
 
 void Component::Load(json::JSON file)
 {
+	std::cout << "Component Loading" << std::endl;
+
+		if (file.hasKey("className"))
+		{
+			json::JSON name = file["className"];
+			Component::name = name.ToString();
+			std::cout << "Class Name: " << name.ToString() << "\n";
+		}
+
+		if (file.hasKey("id"))
+		{
+			json::JSON compId = file["id"];
+			Component::id = compId.ToInt();
+			std::cout << "id: " << Component::id << "\n";
+		}
+	
 	std::cout << "Component Loaded" << std::endl;
 }

@@ -6,6 +6,7 @@
 class Component
 {
 public:
+	std::string name = "";
 	int id = 0;
 
 	Component();
