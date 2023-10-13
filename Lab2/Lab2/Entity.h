@@ -3,11 +3,14 @@
 #define _ENTITY_H_
 #include <string>
 #include "Component.h"
+#include <list>
 #include "json.hpp"
 
 class Entity
 {
 public:
+	std::list<Component*> components;
+	std::string name = "";
 	Entity();
 	~Entity();
 	void Initialize();

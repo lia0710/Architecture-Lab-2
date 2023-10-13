@@ -33,7 +33,7 @@ void Component::Update()
 	std::cout << "Component Updated" << std::endl;
 }
 
-void Component::Load()
+void Component::Load(json::JSON file)
 {
 	std::cout << "Component Loaded" << std::endl;
 }

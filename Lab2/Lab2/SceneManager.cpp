@@ -36,7 +36,7 @@ void SceneManager::Update()
 
 void SceneManager::AddScene(Scene* _scene)
 {
-
+	scenes.push_back(_scene);
 }
 
 void SceneManager::RemoveScene(Scene* _scene)
@@ -46,13 +46,14 @@ void SceneManager::RemoveScene(Scene* _scene)
 
 void SceneManager::Load(json::JSON file)
 {
+	std::cout << "Scene Manager Loading" << std::endl;
     if (file.hasKey("SceneManager"))
     {
         json::JSON sceneManager = file["SceneManager"];
         Scene* newScene = new Scene();
-		scenes.push_back(newScene);
-		newScene->Load(sceneManager);
+		AddScene(newScene);
 		std::cout << "Scene Manager Loaded" << std::endl;
-
+		newScene->Load(sceneManager);
+		Initialize();
     }
 }

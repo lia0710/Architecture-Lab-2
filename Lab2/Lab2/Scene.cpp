@@ -30,7 +30,7 @@ void Scene::Update()
 
 void Scene::AddEntity(Entity* _entity) 
 {
-
+	entities.push_back(_entity);
 }
 
 void Scene::RemoveEntity(Entity* _entity)
@@ -40,6 +40,7 @@ void Scene::RemoveEntity(Entity* _entity)
 
 void Scene::Load(json::JSON file)
 {
+	std::cout << "Scene Loading" << std::endl;
 	if (file[0].hasKey("name"))
 	{
 		json::JSON name = file[0]["name"];
@@ -53,7 +54,7 @@ void Scene::Load(json::JSON file)
 		for (int i = 0; i < jsonEntities.length(); i++)
 		{
 			Entity* newEntity = new Entity();
-			entities.push_back(newEntity);
+			AddEntity(newEntity);
 			newEntity->Load(jsonEntities[i]);
 		}
 

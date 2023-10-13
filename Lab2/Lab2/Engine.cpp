@@ -26,8 +26,7 @@ Engine::~Engine()
 
 void Engine::Initialize()
 {
-
-	std::cout << "Engine Initialized" << std::endl;
+	std::cout << "Engine Initializing" << std::endl;
 
 	//load game settings
 	//half goes in here, half in render system
@@ -44,6 +43,7 @@ void Engine::Initialize()
 
 	Engine::sceneManager->Load(leveldocument);
 
+	std::cout << "Engine Initialized" << std::endl;
 }
 
 void Engine::Destroy()
@@ -59,6 +59,7 @@ void Engine::GameLoop()
 
 void Engine::Load(json::JSON settingDocument)
 {
+	std::cout << "Engine Loading" << std::endl;
 	if (settingDocument.hasKey("Engine"))
 	{
 		json::JSON engine = settingDocument["Engine"];

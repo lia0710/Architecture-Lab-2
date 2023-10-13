@@ -1,4 +1,4 @@
-﻿  Lab2.cpp
+﻿  Entity.cpp
 C:\Users\fishewil\Desktop\Game Architecture\Architecture Lab 2\Architecture-Lab-2\Lab2\Lab2\json.hpp(282,31): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\fishewil\Desktop\Game Architecture\Architecture Lab 2\Architecture-Lab-2\Lab2\Lab2\json.hpp(295,30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\fishewil\Desktop\Game Architecture\Architecture Lab 2\Architecture-Lab-2\Lab2\Lab2\json.hpp(297,31): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data

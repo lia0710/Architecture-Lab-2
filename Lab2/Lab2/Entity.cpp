@@ -25,7 +25,7 @@ void Entity::Destroy()
 
 void Entity::AddComponent(Component* _component)
 {
-
+	components.push_back(_component);
 }
 
 void Entity::RemoveComponent(Component* _component)
@@ -45,5 +45,23 @@ std::string Entity::GetName()
 
 void Entity::Load(json::JSON file)
 {
+	std::cout << "Entity Loading" << std::endl;
+	if (file.hasKey("Name"))
+	{
+		json::JSON name = file["Name"];
+		Entity::name = name.ToString();
+		std::cout << "Name: " << name.ToString() << "\n";
+	}
+
+	if (file.hasKey("Components"))
+	{
+		json::JSON jsonComponents = file["Components"];
+		for (int i = 0; i < jsonComponents.length(); i++)
+		{
+			Component* newComponent = new Component();
+			AddComponent(newComponent);
+			newComponent->Load(jsonComponents[i]);
+		}
+	}
 	std::cout << "Entity Loaded" << std::endl;
 }
