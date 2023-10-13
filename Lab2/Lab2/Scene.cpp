@@ -20,12 +20,20 @@ void Scene::Initialize()
 void Scene::Destroy()
 {
 	std::cout << "Scene Destroyed" << std::endl;
+	for (std::list<Entity*>::iterator it = Scene::entities.begin(); it != Scene::entities.end(); it++)
+	{
+		(*it)->Destroy();
+	}
 	Scene::~Scene();
 }
 
 void Scene::Update()
 {
 	std::cout << "Scene Updated" << std::endl;
+	for (std::list<Entity*>::iterator it = Scene::entities.begin(); it != Scene::entities.end(); it++)
+	{
+		(*it)->Update();
+	}
 }
 
 void Scene::AddEntity(Entity* _entity) 

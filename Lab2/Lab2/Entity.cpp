@@ -20,6 +20,10 @@ void Entity::Initialize()
 void Entity::Destroy()
 {
 	std::cout << "Entity Destroyed" << std::endl;
+	for (std::list<Component*>::iterator it = Entity::components.begin(); it != Entity::components.end(); it++)
+	{
+		(*it)->Destroy();
+	}
 	Entity::~Entity();
 }
 
@@ -36,6 +40,10 @@ void Entity::RemoveComponent(Component* _component)
 void Entity::Update()
 {
 	std::cout << "Entity Updated" << std::endl;
+	for (std::list<Component*>::iterator it = Entity::components.begin(); it != Entity::components.end(); it++)
+	{
+		(*it)->Update();
+	}
 }
 
 std::string Entity::GetName()

@@ -32,6 +32,10 @@ void SceneManager::Destroy()
 void SceneManager::Update()
 {
 	std::cout << "Scene Manager Updated" << std::endl;
+	for (std::list<Scene*>::iterator it = SceneManager::scenes.begin(); it != SceneManager::scenes.end(); it++)
+	{
+		(*it)->Update();
+	}
 }
 
 void SceneManager::AddScene(Scene* _scene)

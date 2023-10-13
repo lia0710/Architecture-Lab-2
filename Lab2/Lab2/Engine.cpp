@@ -54,7 +54,11 @@ void Engine::Destroy()
 
 void Engine::GameLoop()
 {
-
+	std::cout << "Begining Game Loop" << std::endl;
+	renderSystem->Update();
+	assetManager->Update();
+	inputManager->Update();
+	sceneManager->Update();
 }
 
 void Engine::Load(json::JSON settingDocument)

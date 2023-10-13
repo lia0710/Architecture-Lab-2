@@ -10,7 +10,6 @@ Component::Component()
 Component::~Component()
 {
 	std::cout << "Component Destructed" << std::endl;
-	Component::~Component();
 }
 
 void Component::Initialize()
@@ -21,6 +20,7 @@ void Component::Initialize()
 void Component::Destroy()
 {
 	std::cout << "Component Destroyed" << std::endl;
+	Component::~Component();
 }
 
 int Component::GetComponentID()
